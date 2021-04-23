@@ -522,12 +522,10 @@ dialog {
     color: #fff;
 }
 
-section {
-    height: 700px;
-}
 .wrapper-slider {
     padding: 0;
 }
+
 .swiper-container {
     height: 410px;
 }
@@ -593,7 +591,6 @@ section {
     color: #333333;
     top: 120px;
     left: 130px;
-    width: 330px;
 }
 
 .slide-text__main-heading {
@@ -637,7 +634,136 @@ section {
     background-color: #FFC52B;
 }
 
+.advantages .wrapper {
+    padding: 0px 10px;
+}
+
+.cards__privileges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cards__privileges-card {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: linear-gradient(112.2deg, #882B90 0.65%, #642DBC 99.87%);
+    max-width: 380px;
+    height: 240px;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cards__privileges-card h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.cards__privileges-card p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.cards__privileges-card p:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.cards__privileges-card p:last-child {
+    margin-bottom: 18px;
+}
+
+.cards__privileges-card a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    position: relative;
+}
+
+.cards__privileges-card a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: -33px;
+    width: 24px;
+    height: 10px;
+    background-image: url('../img/card-arrow.svg');
+    background-repeat: no-repeat;
+    transition: .4s all;
+}
+
+.cards__privileges-card a:hover::after {
+    right: -44px;
+}
+
+img.third__card-img {
+    margin-bottom: -10px;
+}
+
+.cards__advantages {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.container {
+    border-bottom: 1px solid #ededed;
+}
+
+.cards__advantages-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    height: 320px;
+    background: #F9F9F9;
+    border: 1px solid #E5E5E5;
+    box-sizing: border-box;
+    border-radius: 12px;
+}
+
+.cards__advantages-card img {
+    max-width: 160px;
+    align-self: center;
+    margin-bottom: 20px;
+}
+
+img.card__flowers-img {
+    margin: 0;
+}
+
+.cards__advantages-card h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: #333333;
+    line-height: 131.5%;
+    margin-bottom: 10px;
+}
+
+.cards__advantages-card p {
+    font-size: 14px;
+    line-height: 142%;
+    color: #979797;
+}
+
+
+
+
+
 footer {
+    margin-top: 400px;
     width: 100%;
 }
 
@@ -754,7 +880,7 @@ footer {
     display: flex;
     justify-content: center;
     background-color: #491E6C;
-    padding: 10px;
+    padding: 20px;
     color: #fff;
     font-size: 16px;
     line-height: 19px;
@@ -762,12 +888,15 @@ footer {
 }
 
 @media(max-width: 1230px) {
-    .header-center, .header-top, .header-bottom {
+
+    .header-center,
+    .header-top,
+    .header-bottom {
         padding: 10px 20px;
     }
-.wrapper-slider{
-    padding: 0 20px;
-}
+
+
+
     .header-bottom__search input {
         width: 380px;
     }
@@ -782,6 +911,15 @@ footer {
 
     .header-bottom__search input {
         margin-right: 0px;
+    }
+
+    .wrapper-slider {
+        padding: 0 20px;
+    }
+
+    .cards__privileges-card img {
+        max-width: 165px;
+        margin-bottom: -83px;
     }
 
     .footer-top__row {
@@ -837,6 +975,23 @@ footer {
     .header-top__address {
         display: none;
     }
+
+    .cards__privileges-card img {
+        display: none;
+
+    }
+
+    .privileges-card-text {
+        margin-left: 20px;
+    }
+
+    .cards__advantages-card {
+        padding: 10px;
+    }
+
+    .cards__advantages-card img {
+        max-width: 120px;
+    }
 }
 
 @media(max-width: 880px) {
@@ -856,6 +1011,7 @@ footer {
     .swiper__btn-next {
         display: none;
     }
+
     .slide-text {
         left: 40px;
     }
@@ -934,41 +1090,52 @@ footer {
         z-index: 1000;
         animation: nav-fade-in .4s forwards;
     }
-    .wrapper-slider{
+
+    .header-bottom {
         padding: 0;
     }
-    .header-bottom{
+
+    .wrapper-slider {
         padding: 0;
     }
- 
+
+    .cards__privileges {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media(max-width: 630px) {
-   .swiper-slide__img::after{
-       content: '';
-       position: absolute;
-       top: 43px;
-       width: 100%;
-       height: 100%;
-       background-image: url('../img/girl.png');
-       background-repeat: no-repeat;
-       background-position-x: center;
-   }
-   .swiper-container-horizontal>.swiper-pagination-bullets {
-       bottom: 0;
-   }
-   .swiper-container{
-       height: 590px;
-   }
-   .slide-text {
-    left: 50%;
-    transform: translateX(-50%);
-    top: 71%;
-    text-align: center;
-}
-.slide-text__main-heading{
-    font-size: 20px;
-}
+    .swiper-slide__img::after {
+        content: '';
+        position: absolute;
+        top: 43px;
+        width: 100%;
+        height: 100%;
+        background-image: url('../img/girl.png');
+        background-repeat: no-repeat;
+        background-position-x: center;
+    }
+
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 0;
+    }
+
+    .swiper-container {
+        height: 590px;
+    }
+
+    .slide-text {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 71%;
+        text-align: center;
+        width: 330px;
+    }
+
+    .slide-text__main-heading {
+        font-size: 20px;
+    }
+
     .header-center__logo .logo-img {
         width: 88px;
         height: 33px;
@@ -987,6 +1154,10 @@ footer {
         font-size: 10px;
         top: -5px;
         right: -6px;
+    }
+
+    .cards__advantages {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .footer-top__nav {
@@ -1061,5 +1232,11 @@ footer {
 
     .header-bottom__search input {
         width: 185px;
+    }
+}
+
+@media(max-width: 430px) {
+    .cards__privileges {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
