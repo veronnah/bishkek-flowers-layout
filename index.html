@@ -8,6 +8,7 @@
     <title>Bishkek flowers</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -187,7 +188,7 @@
                             </div>
                         </div>
                     </div>
-                    <img class = "close-search" src="./img/close18x18.png" alt="">
+                    <img class="close-search" src="./img/close18x18.png" alt="">
                     <div class="header-bottom__search">
                         <input type="text" placeholder="Что вы ищете?">
                         <button class="search-btn">Найти</button>
@@ -230,10 +231,80 @@
             </div>
         </div>
     </header>
-    <section>
-        <div class="wrapper">
+    <section class="main__slider">
+        <div class="wrapper wrapper-slider">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="slide-text">
+                            <h2 class="slide-text__main-heading">
+                                Букеты для любимых
+                            </h2>
+                            <div class="slide-text__subtitle">
+                                Доставка свежих букетов и подарков в Бишкеке.
+                                Удиви свою вторую половинку на 14 февраля
+                            </div>
+                            <button>Перейти в каталог</button>
+                        </div>
+                        <div class="swiper-slide__img">
+                            <img src="./img/slide-bg.jpg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-text">
+                            <h2 class="slide-text__main-heading">
+                                Букеты для любимых
+                            </h2>
+                            <div class="slide-text__subtitle">
+                                Доставка свежих букетов и подарков в Бишкеке.
+                                Удиви свою вторую половинку на 14 февраля
+                            </div>
+                            <button>Перейти в каталог</button>
+                        </div>
+                        <div class="swiper-slide__img">
+                            <img src="./img/slide-bg.jpg">
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="slide-text">
+                            <h2 class="slide-text__main-heading">
+                                Букеты для любимых
+                            </h2>
+                            <div class="slide-text__subtitle">
+                                Доставка свежих букетов и подарков в Бишкеке.
+                                Удиви свою вторую половинку на 14 февраля
+                            </div>
+                            <button>Перейти в каталог</button>
+                        </div>
+                        <div class="swiper-slide__img">
+                             <img src="./img/slide-bg.jpg">
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper__btn-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.5 443.5">
+                        <path fill="#fff"
+                            d="M143.5 221.9L336.2 29.1c6.7-6.7 6.7-17.5 0-24.1 -6.7-6.7-17.5-6.7-24.1 0l-204.8 204.8c-6.7 6.7-6.7 17.5 0 24.1l204.8 204.8c6.8 6.5 17.6 6.4 24.1-0.4 6.4-6.6 6.4-17.1 0-23.7L143.5 221.9z" />
+                    </svg>
+                </div>
+                <div class="swiper__btn-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.5 443.5">
+                        <path fill="#fff"
+                            d="M336.2 209.6l-204.8-204.8c-6.8-6.5-17.6-6.4-24.1 0.4 -6.4 6.6-6.4 17.1 0 23.7l192.7 192.7L107.3 414.4c-6.7 6.7-6.7 17.5 0 24.1 6.7 6.7 17.5 6.7 24.1 0l204.8-204.8C342.9 227.1 342.9 216.3 336.2 209.6z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
         </div>
     </section>
+    <section>
+        <div class="cards__advantages">
+
+        </div>
+
+    </section>
+
     <footer>
         <div class="footer-top">
             <div class="wrapper">
@@ -290,7 +361,9 @@
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/main-sliders.js"></script>
 </body>
 
 </html>

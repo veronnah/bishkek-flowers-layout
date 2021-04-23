@@ -54,3 +54,4 @@ function closeMenu() {
   menuToggle.classList.remove('active');
   nav.classList.remove('active');
 }
+
