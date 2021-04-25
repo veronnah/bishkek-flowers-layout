@@ -761,6 +761,7 @@ img.card__flowers-img {
 .products__cards {
     border-bottom: 1px solid #ededed;
     padding-bottom: 150px;
+    margin-bottom: 50px;
 }
 
 .card__head {
@@ -861,7 +862,9 @@ img.card__flowers-img {
     justify-content: center;
     margin: 20px;
 }
-
+.product__card-wishlist path {
+    transition: .3s all;
+}
 .product__card-wishlist:hover path {
     fill: #F93079;
 }
@@ -971,7 +974,101 @@ img.card__flowers-img {
 .buyoneclick-rocket {
     display: none;
 }
+.reviews{
+    padding-bottom: 70px;
+    border-bottom: 1px solid #ededed;
+}
+.reviews__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+}
 
+.reviews__card {
+    display: flex;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    box-sizing: border-box;
+    border-radius: 12px;
+    transition: .3s all;
+    cursor: pointer;
+    position: relative;
+}
+
+.reviews__card:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.reviews__card img {
+    border-top-left-radius: 11px;
+    border-bottom-left-radius: 11px;
+}
+.reviews__card::after{
+    content: '';
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 175px;
+    height: 100px;
+    width: 10px;
+    background-color: #F2C94C;
+}
+.reviews__card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px 40px 24px 30px;
+}
+
+.reviews__card-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.03em;
+    color: #333333;
+}
+
+.reviews__card-message {
+    font-size: 13px;
+    line-height: 142%;
+    letter-spacing: 0.03em;
+    color: #8A8A8A;
+}
+
+.reviews__card-text a {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 142%;
+    letter-spacing: 0.03em;
+    color: #5C2985;
+    text-decoration: none;
+    align-self: flex-end;
+    transition: .3s all;
+    position: relative;
+}
+
+.reviews__card-text a:hover {
+    color: #F2C94C;
+
+}
+
+.reviews__card-text a svg path {
+    transition: .3s all;
+}
+
+.reviews__card-text a:hover svg path {
+    fill: #F2C94C;
+}
+
+.reviews__card-text a svg {
+    margin-left: 8px;
+    margin-top: 3px;
+
+}
 
 
 footer {
@@ -1142,6 +1239,13 @@ footer {
         grid-template-rows: 1fr 1fr;
     }
 
+    .reviews .wrapper {
+        padding: 0 10px;
+    }
+    .reviews__card-text{
+        padding: 24px 27px 19px 24px;
+    }
+   
     .footer-top__row {
         padding: 0px 15px;
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1249,6 +1353,9 @@ footer {
         color: #5C2985;
         font-weight: 600;
         background-color: #fff;
+    }
+    .reviews__cards{
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1521,11 +1628,54 @@ footer {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
     }
+    .products__cards {
+        padding-bottom: 80px;
+        margin-bottom: 20px;
+    }
+    .reviews .wrapper{
+        justify-content: center;
+    }
+    .reviews__card{
+        flex-direction: column;
+        max-width: 244px;
+    }
+    .reviews__card img {
+        width: 243px;
+        height: 243px;
+        border-top-right-radius: 11px;
+        border-bottom-right-radius: 11px;
+        position: relative;
+    }
 
+    .card__head a{
+        margin-left: 10px;
+    }
+    .reviews .card__head{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .card__head h3 {
+        font-size: 20px;
+    }
+    .card__head a{
+        margin-left: 0;
+        font-size: 14px;
+    }
+    .card__head {
+        margin: 24px 0;
+    }
+  
+    
 }
 
 @media(max-width: 430px) {
     .cards__privileges {
         grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media(max-width: 375px) {
+    .cards__advantages{
+        grid-template-columns: 1fr;
     }
 }
