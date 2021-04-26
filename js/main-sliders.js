@@ -43,7 +43,6 @@ var swiper = new Swiper('.articles__swiper-container', {
         1000:{
             slidesPerView: 4.5,
             spaceBetween: 20,
-           
         }
       }
 });
