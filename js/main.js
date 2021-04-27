@@ -59,7 +59,7 @@ const player = document.querySelectorAll('.video__section-player');
 const loadPlayer = (event) => {
   const target = event.currentTarget, 
   iframe = document.createElement('iframe');
-  iframe.src = 'http://www.youtube.com/embed/' + target.dataset.videoId + '?&autoplay=1&mute=1';
+  iframe.src = 'https://www.youtube.com/embed/' + target.dataset.videoId + '?&autoplay=1&mute=1';
   iframe.setAttribute('frameborder', 0);
   target.classList.remove('btn-dis');
   if(target.children.length){
