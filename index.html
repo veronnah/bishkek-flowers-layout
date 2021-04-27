@@ -13,6 +13,7 @@
 </head>
 
 <body class="body">
+
     <header>
         <div class="header-top">
             <div class="wrapper">
@@ -205,7 +206,7 @@
                                 stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                     </a>
-                    <a href="#!" class="cart-icon">
+                    <a href="#!" class="cart-icon cart-btn">
                         <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M4.4772 25.7253L1.86454 10.4412C1.76013 9.83044 2.23062 9.27271 2.85024 9.27271H27.0703C27.6899 9.27271 28.1604 9.83044 28.056 10.4412L25.4433 25.7253C25.3612 26.2056 24.9449 26.5568 24.4576 26.5568H5.4629C4.97564 26.5568 4.55931 26.2056 4.4772 25.7253Z"
@@ -216,6 +217,7 @@
                         </svg>
 
                     </a>
+
                     <a href="#!" class="profile-icon">
                         <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="12.0947" cy="8.57539" r="6.57539" stroke="white" stroke-width="3"
@@ -231,6 +233,11 @@
             </div>
         </div>
     </header>
+    <div class="overlay">
+        <nav class="cart-menu">
+            <img class="close-modal" onclick="closeModal()" src="./img/close-modal.svg">
+        </nav>
+    </div>
     <section class="main__slider">
         <div class="wrapper wrapper-slider">
             <div class="swiper-container">
@@ -378,6 +385,32 @@
             </div>
         </div>
     </section>
+    <div class="buy-overlay">
+        <nav class="buy__one_click-menu">
+            <img class="close-buy__one" src="./img/close-buyone.svg">
+            <form class="buyone__click-form" action="">
+                <h3>Быстрый Заказ</h3>
+                <p>Заполните свои контактные данные и мы свяжемся с Вами для подтверждения заказа</p>
+                <div class="click-form__input-name">
+                    <label for="name">*Имя:</label>
+                    <input type="text">
+                </div>
+                <div class="click-form__input-phone">
+                    <label for="name">*Телефон</label>
+                    <input type="text" placeholder="+7 (XXX) XXX-XX-XX">
+                </div>
+                <div class="check-agreement-cont">
+                    <label class="check-agreement">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                      <span>Я даю согласие на обработку персональных данных</span>
+                </div>
+              
+                <button>Оформить заказ</button>
+            </form>
+        </nav>
+    </div>
     <section class="products__cards">
         <div class="container">
             <div class="wrapper">
@@ -400,8 +433,10 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" onclick="e.stopPropagation();  buyToggle();"
+                                    href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg">
+                                    <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -420,8 +455,9 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn " href="#!"><img src="./img/buy-one-click.svg">
+                                    <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -440,8 +476,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -468,8 +504,8 @@
 
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -495,8 +531,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -515,8 +551,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -535,8 +571,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -555,8 +591,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -581,8 +617,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -601,8 +637,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -621,8 +657,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -641,8 +677,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -661,8 +697,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -681,8 +717,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -701,8 +737,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -721,8 +757,8 @@
                             <div class="product__card-price">1 645 сом</div>
                             <div class="product__card-buy">
                                 <button>В корзину</button>
-                                <a class="buyoneclick-rocket" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
-                                <a class="buyoneclick-desktop" href="#!"><img src="./img/buy-one-click.svg"> <span>
+                                <a class="buyoneclick-rocket buy-btn" href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg"> <span>
                                         Купить в 1 клик</span></a>
                             </div>
                         </div>
@@ -1029,7 +1065,7 @@
                     <div class="video__section-num">
                         <div class="video__section-num_years">
                             <div class="years">19 лет</div>
-                            <div class="years__subtitle">На рынке</div> 
+                            <div class="years__subtitle">На рынке</div>
                         </div>
                         <div class="video__section-num_sales">
                             <div class="sale-num">3 000+</div>
