@@ -302,152 +302,164 @@
                     <li class="active">Авторские букеты</li>
                 </ul>
                 <div class="catalog__content">
-                    <aside class="catalog__filter">
-
-                        <div class="catalog__filter-accordeon">
-                            <h4>Каталог </h4>
-                            <button class="accordion">Цветы</button>
-                            <div class="panel">
-                                <ul>
-                                    <li>Альстромерия</li>
-                                    <li>Гвоздики</li>
-                                </ul>
-                            </div>
-                            <button class="accordion">Розы</button>
-                            <div class="panel">
-                                <ul>
-                                    <li>Красные</li>
-                                    <li>Белые</li>
-                                    <li>Розовые</li>
-                                    <li>Желтые</li>
-                                </ul>
-                            </div>
-                            <button class="accordion">Композиции</button>
-                            <div class="panel">
-                                <ul>
-                                    <li>Букеты</li>
-                                    <li>В корзинках</li>
-                                </ul>
-                            </div>
-                            <button class="accordion">По стоимости</button>
-                            <div class="panel">
-                                <ul>
-                                    <li>Альстромерия</li>
-                                    <li>Гвоздики</li>
-                                </ul>
-                            </div>
-                            <button class="accordion">Повод</button>
-                            <div class="panel">
-                                <ul>
-                                    <li>День Рождения</li>
-                                    <li>14 февраля</li>
-                                </ul>
-                            </div>
-                            <button class="accordion">Цветы для</button>
-                            <div class="panel">
-                                <ul>
-                                    <li>Мамы</li>
-                                    <li>Девушки</li>
-                                    <li>Бабушки</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="catalog__price-filter">
-                            <h4>Фильтры</h4>
-                            <button class="accordion">Цена (СОМ)</button>
-                            <div class="panel">
-                                <div class="filter-price">
-                                    <div class="filter-price__flex-row">
-                                        <input class="filter-price__field js-price-down" type="text" value="0" />
-                                        <span>&#8212;</span>
-                                        <input class="filter-price__field js-price-up" data-max="5000" type="text"
-                                            value="0" />
+                    <div class="filter-overlay">
+                        <aside class="catalog__filter">
+                            <div class="catalog__filter-accordeon">
+                                <h4 class="filter-title">Каталог </h4>
+                                <div class="catalog__filter-head">
+                                    <div class="catalog__filter-head_logout">
+                                        <img src="./img/filter-logout.svg">
+                                        <span onclick="closeFilterMenu();">Закрыть</span>
                                     </div>
-                                    <div class="filter-price__slider js-price-range"></div>
+                                    <div class="catalog__filter-head_reset">
+                                        <img src="./img/filter-reset.svg">
+                                        <span>Сбросить</span>
+                                    </div>
+                                </div>
+                                <button class="accordion">Цветы</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Альстромерия</li>
+                                        <li>Гвоздики</li>
+                                    </ul>
+                                </div>
+                                <button class="accordion">Розы</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Красные</li>
+                                        <li>Белые</li>
+                                        <li>Розовые</li>
+                                        <li>Желтые</li>
+                                    </ul>
+                                </div>
+                                <button class="accordion">Композиции</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Букеты</li>
+                                        <li>В корзинках</li>
+                                    </ul>
+                                </div>
+                                <button class="accordion">По стоимости</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Альстромерия</li>
+                                        <li>Гвоздики</li>
+                                    </ul>
+                                </div>
+                                <button class="accordion">Повод</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>День Рождения</li>
+                                        <li>14 февраля</li>
+                                    </ul>
+                                </div>
+                                <button class="accordion">Цветы для</button>
+                                <div class="panel">
+                                    <ul>
+                                        <li>Мамы</li>
+                                        <li>Девушки</li>
+                                        <li>Бабушки</li>
+                                    </ul>
                                 </div>
                             </div>
-                            <button class="accordion">праздники</button>
-                            <div class="panel panel-holidays">
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="holidays1" value="yes">
-                                        <label for="holidays1">Все</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="holidays2" value="yes">
-                                        <label for="holidays2">На День Рождения</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="holidays3" value="yes">
-                                        <label for="holidays3">На свадьбу</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="holidays4" value="yes">
-                                        <label for="holidays4">Мальчишник</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="holidays5" value="yes">
-                                        <label for="holidays5">Девичник</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="holidays6" value="yes">
-                                        <label for="holidays6">Рождение ребенка</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="holidays7" value="yes">
-                                        <label for="holidays7">Годовщина</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="holidays8" value="yes">
-                                        <label for="holidays8">День знаний</label>
-                                    </li>
-                                </ul>
-                            </div>
-                            <button class="accordion">для кого</button>
+                            <div class="catalog__price-filter">
+                                <h4 class="filter-title">Фильтры</h4>
+                                <button class="accordion">Цена (СОМ)</button>
+                                <div class="panel">
+                                    <div class="filter-price">
+                                        <div class="filter-price__flex-row">
+                                            <input class="filter-price__field js-price-down" type="text" value="0" />
+                                            <span>&#8212;</span>
+                                            <input class="filter-price__field js-price-up" data-max="5000" type="text"
+                                                value="0" />
+                                        </div>
+                                        <div class="filter-price__slider js-price-range"></div>
+                                    </div>
+                                </div>
+                                <button class="accordion">праздники</button>
+                                <div class="panel panel-holidays">
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="holidays1" value="yes">
+                                            <label for="holidays1">Все</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="holidays2" value="yes">
+                                            <label for="holidays2">На День Рождения</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="holidays3" value="yes">
+                                            <label for="holidays3">На свадьбу</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="holidays4" value="yes">
+                                            <label for="holidays4">Мальчишник</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="holidays5" value="yes">
+                                            <label for="holidays5">Девичник</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="holidays6" value="yes">
+                                            <label for="holidays6">Рождение ребенка</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="holidays7" value="yes">
+                                            <label for="holidays7">Годовщина</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="holidays8" value="yes">
+                                            <label for="holidays8">День знаний</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <button class="accordion">для кого</button>
 
-                            <div class="panel panel-to__whom">
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="to__whom1" value="yes">
-                                        <label for="to__whom1">Все</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="to__whom2" value="yes">
-                                        <label for="to__whom2">Для него</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="to__whom3" value="yes">
-                                        <label for="to__whom3">Дедушке</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="to__whom4" value="yes">
-                                        <label for="to__whom4">Бабушке</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="to__whom5" value="yes">
-                                        <label for="to__whom5">Папе</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="to__whom6" value="yes">
-                                        <label for="to__whom6">Маме</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="to__whom7" value="yes">
-                                        <label for="to__whom7">Учительнице</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" class="custom-checkbox" id="to__whom8" value="yes">
-                                        <label for="to__whom8">Другу</label>
-                                    </li>
-                                </ul>
+                                <div class="panel panel-to__whom">
+                                    <ul>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="to__whom1" value="yes">
+                                            <label for="to__whom1">Все</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="to__whom2" value="yes">
+                                            <label for="to__whom2">Для него</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="to__whom3" value="yes">
+                                            <label for="to__whom3">Дедушке</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="to__whom4" value="yes">
+                                            <label for="to__whom4">Бабушке</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="to__whom5" value="yes">
+                                            <label for="to__whom5">Папе</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="to__whom6" value="yes">
+                                            <label for="to__whom6">Маме</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="to__whom7" value="yes">
+                                            <label for="to__whom7">Учительнице</label>
+                                        </li>
+                                        <li>
+                                            <input type="checkbox" class="custom-checkbox" id="to__whom8" value="yes">
+                                            <label for="to__whom8">Другу</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__buttons">
+                                    <button class="filter-btn">Применить</button>
+                                    <button class="filter-btn js-clear-sliders">Сбросить</button>
+                                </div>
                             </div>
-                            <div class="filter__buttons">
-                                <button class="filter-btn">Применить</button>
-                                <button class="filter-btn js-clear-sliders">Сбросить</button>
-                            </div>
-                        </div>
 
-                    </aside>
+                        </aside>
+                    </div>
+
                     <div class="products__cards-wrapper">
                         <div class="card__head card__head-catalog">
                             <h3>Авторские букеты</h3>
@@ -461,7 +473,8 @@
                                 <button class="sortby-disabled">названию</button>
                                 <button class="sortby-disabled">популярности</button>
                             </div>
-                            <button class="sortby-filter__btn"><img src="./img/filter.svg" alt=""> Фильтр</button>
+                            <button class="sortby-filter__btn" onclick="openFilter();"><img src="./img/filter.svg"
+                                    alt=""> Фильтр</button>
                         </div>
                         <div class="product__cards_group-catalog">
                             <div class="product__card product__card-catalog">
