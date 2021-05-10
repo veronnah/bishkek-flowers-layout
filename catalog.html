@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link href="./css/nouislider.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
-    
+
 </head>
 
 <body class="body">
@@ -301,8 +301,6 @@
                     <li>Каталог /</li>
                     <li class="active">Авторские букеты</li>
                 </ul>
-             
-                
                 <div class="catalog__content">
                     <aside class="catalog__filter">
 
@@ -359,30 +357,89 @@
                             <button class="accordion">Цена (СОМ)</button>
                             <div class="panel">
                                 <div class="filter-price">
-                                    <div class="filter-price__slider js-price-range"></div>
                                     <div class="filter-price__flex-row">
-                                      <input class="filter-price__field js-price-down" type="text" value="0 р."/>
-                                      <input class="filter-price__field js-price-up" data-max="100000" type="text" value="0"/>
+                                        <input class="filter-price__field js-price-down" type="text" value="0" />
+                                        <span>&#8212;</span>
+                                        <input class="filter-price__field js-price-up" data-max="5000" type="text"
+                                            value="0" />
                                     </div>
-                                  </div>
+                                    <div class="filter-price__slider js-price-range"></div>
+                                </div>
                             </div>
                             <button class="accordion">праздники</button>
-                            <div class="panel">
+                            <div class="panel panel-holidays">
                                 <ul>
-                                    <li>Красные</li>
-                                    <li>Белые</li>
-                                    <li>Розовые</li>
-                                    <li>Желтые</li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="holidays1" value="yes">
+                                        <label for="holidays1">Все</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="holidays2" value="yes">
+                                        <label for="holidays2">На День Рождения</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="holidays3" value="yes">
+                                        <label for="holidays3">На свадьбу</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="holidays4" value="yes">
+                                        <label for="holidays4">Мальчишник</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="holidays5" value="yes">
+                                        <label for="holidays5">Девичник</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="holidays6" value="yes">
+                                        <label for="holidays6">Рождение ребенка</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="holidays7" value="yes">
+                                        <label for="holidays7">Годовщина</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="holidays8" value="yes">
+                                        <label for="holidays8">День знаний</label>
+                                    </li>
                                 </ul>
                             </div>
                             <button class="accordion">для кого</button>
-                            <div class="panel">
+
+                            <div class="panel panel-to__whom">
                                 <ul>
-                                    <li>Букеты</li>
-                                    <li>В корзинках</li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="to__whom1" value="yes">
+                                        <label for="to__whom1">Все</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="to__whom2" value="yes">
+                                        <label for="to__whom2">Для него</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="to__whom3" value="yes">
+                                        <label for="to__whom3">Дедушке</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="to__whom4" value="yes">
+                                        <label for="to__whom4">Бабушке</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="to__whom5" value="yes">
+                                        <label for="to__whom5">Папе</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="to__whom6" value="yes">
+                                        <label for="to__whom6">Маме</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="to__whom7" value="yes">
+                                        <label for="to__whom7">Учительнице</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="custom-checkbox" id="to__whom8" value="yes">
+                                        <label for="to__whom8">Другу</label>
+                                    </li>
                                 </ul>
-
-
                             </div>
                             <div class="filter__buttons">
                                 <button class="filter-btn">Применить</button>
@@ -392,11 +449,21 @@
 
                     </aside>
                     <div class="products__cards-wrapper">
-                        <div class="card__head">
+                        <div class="card__head card__head-catalog">
                             <h3>Авторские букеты</h3>
                         </div>
+                        <div class="sortby">
+                            <div class="sortby-buttons">
+                                <span>Сортировать по:</span>
+                                <button>умолчанию</button>
+                                <button class="sortby-price">цене <span> <img src="./img/accord-arrow_up.svg"><img
+                                            src="./img/accord-arrow_down.svg"></span> </button>
+                                <button class="sortby-disabled">названию</button>
+                                <button class="sortby-disabled">популярности</button>
+                            </div>
+                            <button class="sortby-filter__btn"><img src="./img/filter.svg" alt=""> Фильтр</button>
+                        </div>
                         <div class="product__cards_group-catalog">
-
                             <div class="product__card product__card-catalog">
                                 <div class="product__card-wishlist">
                                     <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
@@ -753,35 +820,23 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="product__card product__card-catalog">
-                                <div class="product__card-wishlist">
-                                    <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" fill="#DBDBDB" clip-rule="evenodd"
-                                            d="M15.235 0.27291C15.9291 0.27291 16.6221 0.370001 17.281 0.589273C21.3411 1.89836 22.8041 6.31655 21.582 10.1784C20.889 12.1518 19.756 13.9529 18.2721 15.4245C16.148 17.4645 13.8171 19.2755 11.308 20.8355L11.033 21.0002L10.747 20.8245C8.22912 19.2755 5.88502 17.4645 3.74112 15.4136C2.26712 13.942 1.13302 12.1518 0.429018 10.1784C-0.813982 6.31655 0.649019 1.89836 4.75312 0.566364C5.07212 0.457273 5.40102 0.38091 5.73102 0.338364H5.86302C6.17212 0.293637 6.47902 0.27291 6.78702 0.27291H6.90802C7.60102 0.293637 8.27202 0.413637 8.92212 0.63291H8.98702C9.03102 0.653637 9.06402 0.676546 9.08602 0.697273C9.32912 0.774728 9.55902 0.862001 9.77902 0.982001L10.197 1.16746C10.298 1.22088 10.4114 1.30251 10.5094 1.37306C10.5715 1.41776 10.6274 1.45801 10.67 1.48382C10.688 1.49432 10.7062 1.50489 10.7246 1.51553C10.8189 1.57014 10.9172 1.62701 11 1.69C12.2221 0.763819 13.706 0.262001 15.235 0.27291ZM18.161 8.12746C18.612 8.11546 18.997 7.75655 19.03 7.29727V7.16746C19.063 5.63909 18.1291 4.25473 16.709 3.72018C16.258 3.56636 15.763 3.80746 15.598 4.26564C15.444 4.72382 15.686 5.22564 16.148 5.38818C16.8531 5.65 17.325 6.33836 17.325 7.10091V7.13473C17.3041 7.38455 17.38 7.62564 17.534 7.81109C17.688 7.99655 17.919 8.10455 18.161 8.12746Z"
-                                            fill="#DBDBDB" />
-                                    </svg>
-                                </div>
-                                <div class="product__card-content">
-                                    <img src="./img/authorship-works__img8.jpg">
-                                    <div class="product__card-title">Композиция «Сахарный нектарин»</div>
-                                    <div class="product__card-price">1 645 сом</div>
-                                    <div class="product__card-buy">
-                                        <button>В корзину</button>
-                                        <a class="buyoneclick-rocket buy-btn" href="#!"><img
-                                                src="./img/rocket-buyoneclick.svg"></a>
-                                        <a class="buyoneclick-desktop buy-btn" href="#!"><img
-                                                src="./img/buy-one-click.svg">
-                                            <span>
-                                                Купить в 1 клик</span></a>
-                                    </div>
-                                </div>
+
+                        </div>
+                        <div class="pagination">
+                            <button><img src="./img/see-more.svg" alt=""> Показать еще</button>
+                            <div class="pagination__nav">
+                                <img src="./img/pagination-arrow_left.svg" alt="">
+                                <span class="pag__nav-active">1</span>
+                                <span>2</span>
+                                <span>3</span>
+                                <img src="./img/pagination-arrow_right.svg" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
+
     </section>
 
     <footer>

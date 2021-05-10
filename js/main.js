@@ -186,7 +186,7 @@ priceRanges.forEach(el => {
 
   //get maxPrice for slider price
   const maxPrice = +upPriceInput.getAttribute('data-max');
-  upPriceInput.value = maxPrice.toLocaleString() + ' p.';
+  // upPriceInput.value = maxPrice.toLocaleString() + ' p.';
 
   //Init price range slider
   noUiSlider.create(el, {
