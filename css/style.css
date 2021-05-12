@@ -2077,7 +2077,7 @@ ul.breadcrums li.active {
 }
 
 .filter-price__slider .noUi-handle-upper {
-    right: 0 !important;
+    right: -2px !important;
 }
 
 .filter-price__slider .noUi-handle {
@@ -2258,6 +2258,271 @@ button.sortby-filter__btn {
     display: none;
 }
 
+/* product card  page */
+
+
+.product-card__block h3 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+    margin-bottom: 25px;
+}
+
+.product-card {
+    display: flex;
+    width: 100%;
+    padding: 40px;
+    background: #F7F7F7;
+    border: 1px solid #EDEDED;
+    box-sizing: border-box;
+    border-radius: 15px 15px 0px 0px;
+    padding-bottom: 90px;
+}
+
+.product-card__images {
+    display: flex;
+}
+
+.product-card__images-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 25px;
+}
+
+.product-card__image-big {
+    margin-right: 40px;
+}
+
+.product-card__info-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabs-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: -47px;
+}
+
+.tab {
+    padding: 30px 44px;
+    border: 1px solid #EDEDED;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.tab p {
+    max-width: 773px;
+    font-size: 13px;
+    line-height: 20px;
+    color: #606060;
+}
+
+.tabs-bar,
+.bar-item {
+    display: inline-block;
+    border: none;
+    outline: 0;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}
+
+
+.bar-item {
+    border: 1px solid #EDEDED;
+    box-sizing: border-box;
+    border-radius: 12px 12px 0px 0px;
+    padding: 10px 40px;
+    margin-right: -4px;
+}
+
+.tab-bg-active {
+    background-color: #fff;
+    padding-top: 15px;
+}
+
+.bar-item:first-child {
+    border-radius: 0px 12px 0px 0px;
+}
+
+.tab_text-highlited {
+    padding: 12px 20px;
+    max-width: 736px;
+    font-size: 13px;
+    color: #606060;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 18px;
+    background-color: #945ca217;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.tab_text-highlited::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #945CA2;
+    height: 60px;
+    width: 5px;
+}
+
+.advantages__product-card {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.products__card-slider {
+    margin-bottom: 45px;
+}
+
+.product__card-slide {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: ease-in-out .3s all;
+    position: relative;
+    width: 280px;
+    min-height: 400px;
+}
+
+.products__card-slider {
+    position: relative;
+}
+
+.products-slider__btn-prev,
+.products-slider__btn-next {
+    top: 40%;
+}
+
+.products-slider__btn-prev {
+    left: 7px;
+}
+
+.products-slider__btn-next {
+    right: 7px;
+}
+
+.product-slide {
+    width: 100%;
+}
+
+.products__card-swiper-container {
+    height: unset;
+}
+
+.info-head__wishlist a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #696969;
+    text-decoration: none;
+}
+
+.info-head__wishlist img {
+    margin-right: 5px;
+}
+
+.info-head__instock {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    position: relative;
+    font-size: 13px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.info-head__instock::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: #33C300;
+}
+
+.product-card__info-head {
+    margin-bottom: 25px;
+}
+
+.card__info-price {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 60px;
+    color: #333333;
+}
+
+.card__info-about {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 142%;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+ul.card__info-composition li {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 142%;
+    color: #000000;
+}
+
+.product-card__tocart {
+    width: 188px;
+    height: 50px;
+    background-color: #FFC52B;
+    font-weight: 500;
+    border-radius: 100px;
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin-right: 15px;
+    transition: .3s all;
+}
+
+.product-card__tocart:hover {
+    background-color: #f6ca52;
+}
+
+.buyoneclick-card__product img {
+    margin-right: -14px;
+}
+
+a.buyoneclick-card__product {
+    text-decoration: underline;
+    line-height: 20px;
+    text-decoration-style: dotted;
+    font-size: 16px;
+    color: #696969;
+}
+
+.product-card__buttons {
+    margin-top: 40px;
+}
+.products__card-slider h4{
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 40px;
+    color: #000000;
+    margin-bottom: 25px;
+    margin-left: 10px;
+}
+.swiper-slide__product{
+    display: flex;
+    justify-content: center;
+}
+
 @media(max-width: 1800px) {
     .article-slide img {
         height: 280px;
@@ -2418,6 +2683,23 @@ button.sortby-filter__btn {
     .products__cards-wrapper {
         margin-left: 20px;
     }
+    .product-card__block, .advantages__product-card, .products__card-slider{
+        margin: 0 20px;
+    }
+    ul.breadcrums-produc_card{
+        margin-left: 20px;
+    }
+    .product-card{
+        padding: 20px;
+        padding-bottom: 100px;
+    }
+    .product-card__tocart{
+        width: 136px;
+        height: 40px;
+    }
+    .products__card-slider{
+        margin-bottom: 60px;
+    }
 }
 
 @media(max-width: 1190px) {
@@ -2569,6 +2851,20 @@ button.sortby-filter__btn {
     .pagination {
         align-items: unset;
     }
+
+    .product-card__buttons{
+        display: flex;
+        align-items: center;
+    }
+    .product-card__tocart{
+        background-color: transparent;
+        border: 1px solid #5C2985;
+        color: #5C2985;
+    }
+    .product-card__tocart:hover{
+        background-color: #5C2985;
+        color: #fff;
+    }
 }
 
 @media(max-width: 910px) {
@@ -2589,6 +2885,13 @@ button.sortby-filter__btn {
 
     .cart-menu.open {
         left: 17%;
+    }
+    .product-card__images-small{
+        display: none;
+    }
+    .product-card__image-big img{
+        width: 330px;
+        height: auto;
     }
 }
 
@@ -2855,6 +3158,15 @@ button.sortby-filter__btn {
     .video__section iframe {
         width: 530px;
         height: 337px;
+    }
+    .product-card{
+        flex-direction: column;
+    }
+    .cards__advantages{
+        overflow: hidden;
+    }
+    .product-card__info-head{
+        margin-top: 20px;
     }
 }
 
@@ -3222,7 +3534,21 @@ button.sortby-filter__btn {
         top: -40px;
         padding: 16px;
     }
-
+    .product-card__image-big img{
+        width: 100%;
+    }
+    .product-card__image-big{
+        margin-right: 0;
+    }
+    .product-card__block, .advantages__product-card, .products__card-slider{
+        margin: 0;
+    }
+    .product-card__block h3, ul.breadcrums-produc_card{
+        margin-left: 10px;
+    }
+    .product-card__block h3, .products__card-slider h4{
+        font-size: 20px;
+    }
 }
 
 @media(max-width: 375px) {

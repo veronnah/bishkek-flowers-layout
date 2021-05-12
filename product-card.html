@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bishkek flowers</title>
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <link href="./css/nouislider.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body class="body">
+
+    <header>
+        <div class="header-top">
+            <div class="wrapper">
+                <nav class="header-top__nav">
+                    <ul>
+                        <li><a href="#!">О нас</a></li>
+                        <li><a href="#!">Политика</a></li>
+                    </ul>
+                </nav>
+                <div class="header-top__address">
+                    <a href="#!">
+                        <img src="./img/send.svg">
+                        Доставка круглосуточно
+                    </a>
+                    <a href="#!">
+                        <img src="./img/phone.svg">
+                        Контакт-центр работает с 9-21
+                    </a>
+                    <a href="#!" class="header-top__address-street">
+                        <img src="./img/map.svg">
+                        Бишкек ул. Байтик-Батыра 8
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="wrapper">
+
+                <div class="header-center__logo">
+                    <div class="burger-menu toggle" onclick="openMenu();"><img src="./img/burger-catalog.svg" alt="">
+                    </div>
+                    <img class="logo-img" src="./img/logo.svg" alt="">
+                </div>
+                <div class="menu-mobile__nav">
+                    <div class="menu-mobile__nav-head">
+                        <div class="head-back">
+                            <img class="menu-mobile__close" onclick="closeMenu();" src="./img/arrow-left.svg">
+                            <span>Меню</span>
+                        </div>
+                        <div class="profile__sign-in">
+                            <img src="./img/profile-mobile.svg">
+                            <span>Войти</span>
+                        </div>
+                    </div>
+                    <ul class="menu-mobile__nav-top">
+                        <li><a href="#!">Каталог<img src="./img/arrow-right-mobile.svg"></a></li>
+                        <li><a href="#!">Услуги<img src="./img/arrow-right-mobile.svg"></a></li>
+                        <li><a href="#!">Доставка</a></li>
+                        <li><a href="#!">Оплата</a></li>
+                        <li><a href="#!">О компании<img src="./img/arrow-right-mobile.svg"></a></li>
+                        <li><a href="#!">Контакты</a></li>
+                        <li class="address-phone"><img src="./img/map-mobile.svg"><a href="#!"> Бишкек ул.
+                                Байтик-Батыра 8</a></li>
+                        <li class="address-phone"><img src="./img/phone-mobile.svg"><a href="tel:+7 (495) 111-11-11">+7
+                                (495) 111-11-11</a></li>
+                        <li class="address-phone"><img src="./img/whatsapp.svg"> <a href="tel:+996 (771) 89 69 59">+996
+                                (771) 89 69 59</a></li>
+                        <li class="address-phone"><img src="./img/telegram.svg"><a href="tel:+996 (771) 89 69 59">
+                                +996 (771) 89 69 59</a></li>
+                        <div class="menu-mobile__nav-socials">
+                            <h4>Мы в мессенджерах:</h4>
+                            <div class="menu-mobile__nav-socials-pics">
+                                <a href="#!"><img src="./img/instagram.svg"></a>
+                                <a href="#!"><img src="./img/vk.svg"></a>
+                                <a href="#!"> <img src="./img/facebook.svg"></a>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+                <div class="header-center__nav">
+                    <ul class="menu-mobile__nav-bottom">
+                        <li><a href="#!">Контакты</a></li>
+                        <li><a href="#!">Оплата</a></li>
+                        <li><a href="#!">Доставка</a></li>
+                        <li><a href="#!">Корп-Клиентам</a></li>
+                        <li><a href="#!">FAQ</a></li>
+                        <li><a href="#!">Акции</a></li>
+                    </ul>
+                </div>
+                <div class="header-center__phone-dropdown">
+                    <input type="checkbox" id="toggle">
+                    <a href="tel:+996 (771) 89 69 59">+996 (771) 89 69 59</a>
+                    <label for="toggle"><img src="./img/dropdown-select.svg" alt=""></label>
+                    <dialog>
+                        <label for="toggle" class="dialog-toggle"><img src="./img/dropdown-select.svg" alt=""></label>
+                        <a href="tel:+996 (771) 89 69 59"><img src="./img/dropdown-select-phone.svg" alt="">+996 (771)
+                            89 69 59</a>
+                        <a href="tel:+996 (771) 89 69 59"><img src="./img/whatsapp.svg" alt="">+996 (771) 89 69 59</a>
+                        <a href="tel:+996 (771) 89 69 59"><img src="./img/telegram.svg" alt="">+996 (771) 89 69 59</a>
+                        <div class="phone-dropdown__socials">
+                            <a href="#!"><img src="./img/instagram.svg"></a>
+                            <a href="#!"><img src="./img/vk.svg"></a>
+                            <a href="#!"><img src="./img/facebook.svg"></a>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <div class="wrapper">
+
+                <div class="header-bottom__search-group">
+                    <div class="catalog-menu">
+                        <button class="header-bottom__catalog-btn " onclick="catalogMenu()"><img
+                                src="./img/burger-catalog.svg">
+                            Каталог</button>
+                        <div class="dropdown">
+
+                            <a href="#!">Цветы <span>
+                                    <svg class="arrow-right" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 11L6.02161 6L1 1" stroke="#333333" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span></a>
+                            <a href="#!">Розы <span>
+                                    <svg class="arrow-right" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 11L6.02161 6L1 1" stroke="#333333" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span></a>
+                            <a href="#!">Композиции <span>
+                                    <svg class="arrow-right" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 11L6.02161 6L1 1" stroke="#333333" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span></a>
+                            <a href="#!">По стоимости <span>
+                                    <svg class="arrow-right" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 11L6.02161 6L1 1" stroke="#333333" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span></a>
+                            <a href="#!">Повод <span>
+                                    <svg class="arrow-right" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 11L6.02161 6L1 1" stroke="#333333" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span></a>
+                            <a class="flowers-for" href="#!">Цветы для <span>
+                                    <svg class="arrow-right" width="7" height="12" viewBox="0 0 7 12" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 11L6.02161 6L1 1" stroke="#333333" stroke-width="1.5"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </span></a>
+                            <div class="catalog__dropdown-submenu">
+                                <ul>
+                                    <li>Бабушки</li>
+                                    <li>Врача</li>
+                                    <li>Девушки</li>
+                                    <li>Женщины</li>
+                                    <li>Показать все</li>
+                                    <li>Коллеги</li>
+                                    <li>Мамы</li>
+                                    <li>Мужчины</li>
+                                    <li>Подруги</li>
+                                </ul>
+                                <ul>
+                                    <li>Родителей</li>
+                                    <li>Руководителя</li>
+                                    <li>Сестры</li>
+                                    <li>Супруги</li>
+                                    <li>Тещи</li>
+                                    <li>Учителя</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <img class="close-search" src="./img/close18x18.png" alt="">
+                    <div class="header-bottom__search">
+                        <input type="text" placeholder="Что вы ищете?">
+                        <button class="search-btn">Найти</button>
+                    </div>
+                </div>
+                <div class="header-bottom__profile-nav">
+                    <a href="#!" class="header__nav-search"><img src="./img/search.svg"></a>
+                    <a href="#!" class="wishlist-icon"><svg width="31" height="29" viewBox="0 0 31 29" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M14.997 27.0561C11.9507 25.1814 9.11684 22.9749 6.54605 20.4761C4.73866 18.6766 3.36272 16.4829 2.52361 14.0628C1.01361 9.36832 2.77739 3.994 7.71345 2.40351C10.3076 1.56836 13.1409 2.04568 15.3269 3.68616C17.5137 2.04768 20.346 1.57053 22.9404 2.40351C27.8764 3.994 29.6529 9.36832 28.1429 14.0628C27.3038 16.4829 25.9278 18.6766 24.1204 20.4761C21.5496 22.9749 18.7158 25.1814 15.6695 27.0561L15.3396 27.2614L14.997 27.0561Z"
+                                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M20.5801 7.68799C22.0751 8.16557 23.1374 9.50779 23.2702 11.087" stroke="white"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#!" class="cart-icon cart-btn">
+                        <svg width="30" height="29" viewBox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M4.4772 25.7253L1.86454 10.4412C1.76013 9.83044 2.23062 9.27271 2.85024 9.27271H27.0703C27.6899 9.27271 28.1604 9.83044 28.056 10.4412L25.4433 25.7253C25.3612 26.2056 24.9449 26.5568 24.4576 26.5568H5.4629C4.97564 26.5568 4.55931 26.2056 4.4772 25.7253Z"
+                                stroke="white" stroke-width="3" />
+                            <path
+                                d="M23.0415 8.5H7.28804C7.95916 4.47207 11.2859 1.5 15.1648 1.5C19.0437 1.5 22.3704 4.47207 23.0415 8.5Z"
+                                stroke="white" stroke-width="3" />
+                        </svg>
+
+                    </a>
+
+                    <a href="#!" class="profile-icon">
+                        <svg width="25" height="30" viewBox="0 0 25 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12.0947" cy="8.57539" r="6.57539" stroke="white" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.66482 24.2958C1.66305 23.8336 1.76643 23.377 1.96713 22.9606C2.59696 21.7009 4.37307 21.0333 5.84686 20.731C6.90976 20.5042 7.98734 20.3526 9.07158 20.2775C11.079 20.1012 13.0979 20.1012 15.1053 20.2775C16.1895 20.3535 17.267 20.505 18.33 20.731C19.8038 21.0333 21.5799 21.6379 22.2098 22.9606C22.6134 23.8094 22.6134 24.7948 22.2098 25.6436C21.5799 26.9663 19.8038 27.5709 18.33 27.8606C17.2684 28.0968 16.1904 28.2526 15.1053 28.3267C13.4715 28.4652 11.83 28.4905 10.1927 28.4023C9.81477 28.4023 9.44947 28.4023 9.07158 28.3267C7.99054 28.2536 6.9167 28.0977 5.85946 27.8606C4.37307 27.5709 2.60956 26.9663 1.96713 25.6436C1.76745 25.2224 1.66418 24.762 1.66482 24.2958Z"
+                                stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                    </a>
+                    <button class="sign__in-btn">Войти</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="overlay">
+        <nav class="cart-menu">
+            <img class="close-modal" onclick="closeModal()" src="./img/close-modal.svg">
+            <h3>Ваши товары</h3>
+            <div class="cart__product">
+                <img class="product-image" src="./img/cart-product.jpg" alt="">
+                <div class="cart__product-descr">
+                    <div class="cart__product-title">
+                        <div class="product-title">
+                            15 красных роз в каскадном оформлении и мишка из фоамирана (мишка отдельно 2500с)
+                        </div>
+                        <div class="product-price">3 870 сом </div>
+                    </div>
+                    <div class="spin"><span>&ndash;</span><input value="0" /><span>+</span></div>
+                </div>
+
+
+                <img class="delete-product" src="./img/delete.svg" alt="">
+            </div>
+            <div class="cart-buttons">
+                <button class="continue__shopping">Продолжить покупки</button>
+                <div class="order-btn">
+                    <div class="total-price">
+                        3 870 сом
+                    </div>
+                    <button class="buy__btn">Оформить заказ</button>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="buy-overlay">
+        <nav class="buy__one_click-menu">
+            <img class="close-buy__one" src="./img/close-buyone.svg">
+            <form class="buyone__click-form" action="">
+                <h3>Быстрый Заказ</h3>
+                <p>Заполните свои контактные данные и мы свяжемся с Вами для подтверждения заказа</p>
+                <div class="click-form__input-name">
+                    <label for="name">*Имя:</label>
+                    <input type="text">
+                </div>
+                <div class="click-form__input-phone">
+                    <label for="name">*Телефон</label>
+                    <input type="text" placeholder="+7 (XXX) XXX-XX-XX">
+                </div>
+                <div class="check-agreement-cont">
+                    <label class="check-agreement">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                    </label>
+                    <span>Я даю согласие на обработку персональных данных</span>
+                </div>
+
+                <button>Оформить заказ</button>
+            </form>
+        </nav>
+    </div>
+    <div class="wrapper">
+        <ul class="breadcrums breadcrums-produc_card">
+            <li>Главная /</li>
+            <li>Каталог /</li>
+            <li class="active">Авторские букеты</li>
+        </ul>
+    </div>
+
+    <section class="product-card__block">
+        <div class="container">
+            <div class="wrapper">
+                <h3>31 пионовидный тюльпан</h3>
+                <div class="product-card">
+                    <div class="product-card__images">
+                        <div class="product-card__images-small">
+                            <img src="./img/card-small_1.png">
+                            <img src="./img/card-small_2.png">
+                            <img src="./img/card-small_3.png">
+                            <img src="./img/card-small_3.png">
+                        </div>
+                        <div class="product-card__image-big">
+                            <img src="./img/card-big.png">
+                        </div>
+                    </div>
+                    <div class="product-card__info">
+                        <div class="product-card__info-head">
+                            <div class="info-head__instock">В наличии</div>
+                            <div class="info-head__wishlist"><a href="#!"><img src="./img/card-product_fav.png"> В
+                                    избранное</a> </div>
+                        </div>
+                        <div class="card__info-price">1 800 сом</div>
+                        <p class="card__info-about">
+                            Красивый букет из VIP Premium колумбийской красной розы. Можно подарить на день
+                            влюблённых, день рождения, первое свидание и просто без повода)
+                        </p>
+                        <ul class="card__info-composition">
+                            <li>Роза одноголовая - 17 шт</li>
+                            <li>Статица - 5 шт</li>
+                            <li>Ирис - 9 шт</li>
+                            <li>Хризантема кустовая - 7 шт</li>
+                            <li>Салал - 0.5</li>
+                            <li>Лента атласная</li>
+                        </ul>
+                        <div class="product-card__buttons">
+                            <button class="product-card__tocart">В корзину</button>
+                            <a class="buyoneclick-rocket buy-btn" onclick="e.stopPropagation();  buyToggle();"
+                                href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                            <a class="buyoneclick-desktop buy-btn buyoneclick-card__product" href="#!"><img
+                                    src="./img/buy-one-click.svg">
+                                <span>
+                                    Купить в 1 клик</span></a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tabs-container">
+
+                    <div class="tabs-bar">
+                        <button class="bar-item tablink tab-bg-active"
+                            onclick="openTab(event,'description')">Описание</button>
+                        <button class="bar-item  tablink" onclick="openTab(event,'composition')">Состав</button>
+                    </div>
+
+                    <div id="description" class="tab">
+                        <div class="tab_text-highlited">
+                            Некоторые компоненты букета, в зависимости от сезонности, могут быть изменены во время
+                            сборки, но удовольствие, которое передает композиция, останется неизменным.
+                        </div>
+                        <p>Красивый букет из VIP Premium колумбийской красной розы. Можно подарить на день влюблённых,
+                            день рождения, первое свидание и просто без повода) Дарите радость))) 🌹Кто понимает в
+                            качестве Колумбийской розы,тот становиться нашим постоянным клиентом! Надеемся Вы им также
+                            станете после получения этого прекрасного букета)</p>
+                    </div>
+
+                    <div id="composition" class="tab" style="display:none">
+                        <div class="tab_text-highlited">
+                            Некоторые компоненты букета, в зависимости от сезонности, могут быть изменены во время
+                            сборки, но удовольствие, которое передает композиция, останется неизменным.
+                        </div>
+                        <p>Красивый букет из VIP Premium колумбийской красной розы. Можно подарить на день влюблённых,
+                            день рождения, первое свидание и просто без повода) Дарите радость))) 🌹Кто понимает в
+                            качестве Колумбийской розы,тот становиться нашим постоянным клиентом! Надеемся Вы им также
+                            станете после получения этого прекрасного букета)
+                            Красивый букет из VIP Premium колумбийской красной розы. Можно подарить на день влюблённых,
+                            день рождения, первое свидание и просто без повода) Дарите радость))) 🌹Кто понимает в
+                            качестве Колумбийской розы,тот становиться нашим постоянным клиентом! Надеемся Вы им также
+                            станете после получения этого прекрасного букета)</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="advantages__product-card">
+        <div class="container">
+            <div class="wrapper">
+                <div class="cards__advantages">
+                    <div class="cards__advantages-card">
+                        <img src="./img/adv-coins.svg">
+                        <h3>Удобная оплата</h3>
+                        <p>Мы принимаем оплату наличными, банковскими картами VISA и MASTERCARD, Яндекс Деньгами, QIWI,
+                            PayPal</p>
+                    </div>
+                    <div class="cards__advantages-card">
+                        <img class="card__flowers-img" src="./img/adv-flowers.svg">
+                        <h3>Подарочная упаковка</h3>
+                        <p>Эксклюзивная подарочная коробка, открытка и набор по уходу бесплатно к каждому заказу</p>
+                    </div>
+                    <div class="cards__advantages-card">
+                        <img src="./img/adv-camera.svg">
+                        <h3>Фото перед доставкой</h3>
+                        <p>Отправляем в мессенджеры фотографию собранного букета перед доставкой. Также можем сделать
+                            фото при вручении</p>
+                    </div>
+                    <div class="cards__advantages-card">
+                        <img src="./img/adv-car.svg">
+                        <h3>Бесплатная доставка</h3>
+                        <p>Бесплатная доставка по Бишкеку. Доставка за пределы города рассчитывается автоматически из
+                            стоимости 1 км</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="products__card-slider">
+        <div class="wrapper">
+            <h4>С этим товаром покупают </h4>
+        </div>
+        <div class="wrapper wrapper-slider">
+            <div class="swiper-container products__card-swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide swiper-slide__product">
+                        <div class="product__card-slide">
+                            <div class="product__card-wishlist">
+                                <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" fill="#DBDBDB" clip-rule="evenodd"
+                                        d="M15.235 0.27291C15.9291 0.27291 16.6221 0.370001 17.281 0.589273C21.3411 1.89836 22.8041 6.31655 21.582 10.1784C20.889 12.1518 19.756 13.9529 18.2721 15.4245C16.148 17.4645 13.8171 19.2755 11.308 20.8355L11.033 21.0002L10.747 20.8245C8.22912 19.2755 5.88502 17.4645 3.74112 15.4136C2.26712 13.942 1.13302 12.1518 0.429018 10.1784C-0.813982 6.31655 0.649019 1.89836 4.75312 0.566364C5.07212 0.457273 5.40102 0.38091 5.73102 0.338364H5.86302C6.17212 0.293637 6.47902 0.27291 6.78702 0.27291H6.90802C7.60102 0.293637 8.27202 0.413637 8.92212 0.63291H8.98702C9.03102 0.653637 9.06402 0.676546 9.08602 0.697273C9.32912 0.774728 9.55902 0.862001 9.77902 0.982001L10.197 1.16746C10.298 1.22088 10.4114 1.30251 10.5094 1.37306C10.5715 1.41776 10.6274 1.45801 10.67 1.48382C10.688 1.49432 10.7062 1.50489 10.7246 1.51553C10.8189 1.57014 10.9172 1.62701 11 1.69C12.2221 0.763819 13.706 0.262001 15.235 0.27291ZM18.161 8.12746C18.612 8.11546 18.997 7.75655 19.03 7.29727V7.16746C19.063 5.63909 18.1291 4.25473 16.709 3.72018C16.258 3.56636 15.763 3.80746 15.598 4.26564C15.444 4.72382 15.686 5.22564 16.148 5.38818C16.8531 5.65 17.325 6.33836 17.325 7.10091V7.13473C17.3041 7.38455 17.38 7.62564 17.534 7.81109C17.688 7.99655 17.919 8.10455 18.161 8.12746Z"
+                                        fill="#DBDBDB" />
+                                </svg>
+                            </div>
+                            <div class="product__card-content">
+                                <img src="./img/authorship-works__img1.jpg">
+                                <div class="product__card-title">Композиция «Сахарный нектарин»</div>
+                                <div class="product__card-price">1 645 сом</div>
+                                <div class="product__card-buy">
+                                    <button>В корзину</button>
+                                    <a class="buyoneclick-rocket buy-btn" onclick="e.stopPropagation();  buyToggle();"
+                                        href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                    <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg">
+                                        <span>
+                                            Купить в 1 клик</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide swiper-slide__product">
+                        <div class="product__card-slide">
+                            <div class="product__card-wishlist">
+                                <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" fill="#DBDBDB" clip-rule="evenodd"
+                                        d="M15.235 0.27291C15.9291 0.27291 16.6221 0.370001 17.281 0.589273C21.3411 1.89836 22.8041 6.31655 21.582 10.1784C20.889 12.1518 19.756 13.9529 18.2721 15.4245C16.148 17.4645 13.8171 19.2755 11.308 20.8355L11.033 21.0002L10.747 20.8245C8.22912 19.2755 5.88502 17.4645 3.74112 15.4136C2.26712 13.942 1.13302 12.1518 0.429018 10.1784C-0.813982 6.31655 0.649019 1.89836 4.75312 0.566364C5.07212 0.457273 5.40102 0.38091 5.73102 0.338364H5.86302C6.17212 0.293637 6.47902 0.27291 6.78702 0.27291H6.90802C7.60102 0.293637 8.27202 0.413637 8.92212 0.63291H8.98702C9.03102 0.653637 9.06402 0.676546 9.08602 0.697273C9.32912 0.774728 9.55902 0.862001 9.77902 0.982001L10.197 1.16746C10.298 1.22088 10.4114 1.30251 10.5094 1.37306C10.5715 1.41776 10.6274 1.45801 10.67 1.48382C10.688 1.49432 10.7062 1.50489 10.7246 1.51553C10.8189 1.57014 10.9172 1.62701 11 1.69C12.2221 0.763819 13.706 0.262001 15.235 0.27291ZM18.161 8.12746C18.612 8.11546 18.997 7.75655 19.03 7.29727V7.16746C19.063 5.63909 18.1291 4.25473 16.709 3.72018C16.258 3.56636 15.763 3.80746 15.598 4.26564C15.444 4.72382 15.686 5.22564 16.148 5.38818C16.8531 5.65 17.325 6.33836 17.325 7.10091V7.13473C17.3041 7.38455 17.38 7.62564 17.534 7.81109C17.688 7.99655 17.919 8.10455 18.161 8.12746Z"
+                                        fill="#DBDBDB" />
+                                </svg>
+                            </div>
+                            <div class="product__card-content">
+                                <img src="./img/authorship-works__img2.jpg">
+                                <div class="product__card-title">Композиция «Сахарный нектарин»</div>
+                                <div class="product__card-price">1 645 сом</div>
+                                <div class="product__card-buy">
+                                    <button>В корзину</button>
+                                    <a class="buyoneclick-rocket buy-btn" onclick="e.stopPropagation();  buyToggle();"
+                                        href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                    <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg">
+                                        <span>
+                                            Купить в 1 клик</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide swiper-slide__product">
+                        <div class="product__card-slide">
+                            <div class="product__card-wishlist">
+                                <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" fill="#DBDBDB" clip-rule="evenodd"
+                                        d="M15.235 0.27291C15.9291 0.27291 16.6221 0.370001 17.281 0.589273C21.3411 1.89836 22.8041 6.31655 21.582 10.1784C20.889 12.1518 19.756 13.9529 18.2721 15.4245C16.148 17.4645 13.8171 19.2755 11.308 20.8355L11.033 21.0002L10.747 20.8245C8.22912 19.2755 5.88502 17.4645 3.74112 15.4136C2.26712 13.942 1.13302 12.1518 0.429018 10.1784C-0.813982 6.31655 0.649019 1.89836 4.75312 0.566364C5.07212 0.457273 5.40102 0.38091 5.73102 0.338364H5.86302C6.17212 0.293637 6.47902 0.27291 6.78702 0.27291H6.90802C7.60102 0.293637 8.27202 0.413637 8.92212 0.63291H8.98702C9.03102 0.653637 9.06402 0.676546 9.08602 0.697273C9.32912 0.774728 9.55902 0.862001 9.77902 0.982001L10.197 1.16746C10.298 1.22088 10.4114 1.30251 10.5094 1.37306C10.5715 1.41776 10.6274 1.45801 10.67 1.48382C10.688 1.49432 10.7062 1.50489 10.7246 1.51553C10.8189 1.57014 10.9172 1.62701 11 1.69C12.2221 0.763819 13.706 0.262001 15.235 0.27291ZM18.161 8.12746C18.612 8.11546 18.997 7.75655 19.03 7.29727V7.16746C19.063 5.63909 18.1291 4.25473 16.709 3.72018C16.258 3.56636 15.763 3.80746 15.598 4.26564C15.444 4.72382 15.686 5.22564 16.148 5.38818C16.8531 5.65 17.325 6.33836 17.325 7.10091V7.13473C17.3041 7.38455 17.38 7.62564 17.534 7.81109C17.688 7.99655 17.919 8.10455 18.161 8.12746Z"
+                                        fill="#DBDBDB" />
+                                </svg>
+                            </div>
+                            <div class="product__card-content">
+                                <img src="./img/authorship-works__img3.jpg">
+                                <div class="product__card-title">Композиция «Сахарный нектарин»</div>
+                                <div class="product__card-price">1 645 сом</div>
+                                <div class="product__card-buy">
+                                    <button>В корзину</button>
+                                    <a class="buyoneclick-rocket buy-btn" onclick="e.stopPropagation();  buyToggle();"
+                                        href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                    <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg">
+                                        <span>
+                                            Купить в 1 клик</span></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide swiper-slide__product">
+                        <div class="product__card-slide">
+                            <div class="product__card-wishlist">
+                                <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" fill="#DBDBDB" clip-rule="evenodd"
+                                        d="M15.235 0.27291C15.9291 0.27291 16.6221 0.370001 17.281 0.589273C21.3411 1.89836 22.8041 6.31655 21.582 10.1784C20.889 12.1518 19.756 13.9529 18.2721 15.4245C16.148 17.4645 13.8171 19.2755 11.308 20.8355L11.033 21.0002L10.747 20.8245C8.22912 19.2755 5.88502 17.4645 3.74112 15.4136C2.26712 13.942 1.13302 12.1518 0.429018 10.1784C-0.813982 6.31655 0.649019 1.89836 4.75312 0.566364C5.07212 0.457273 5.40102 0.38091 5.73102 0.338364H5.86302C6.17212 0.293637 6.47902 0.27291 6.78702 0.27291H6.90802C7.60102 0.293637 8.27202 0.413637 8.92212 0.63291H8.98702C9.03102 0.653637 9.06402 0.676546 9.08602 0.697273C9.32912 0.774728 9.55902 0.862001 9.77902 0.982001L10.197 1.16746C10.298 1.22088 10.4114 1.30251 10.5094 1.37306C10.5715 1.41776 10.6274 1.45801 10.67 1.48382C10.688 1.49432 10.7062 1.50489 10.7246 1.51553C10.8189 1.57014 10.9172 1.62701 11 1.69C12.2221 0.763819 13.706 0.262001 15.235 0.27291ZM18.161 8.12746C18.612 8.11546 18.997 7.75655 19.03 7.29727V7.16746C19.063 5.63909 18.1291 4.25473 16.709 3.72018C16.258 3.56636 15.763 3.80746 15.598 4.26564C15.444 4.72382 15.686 5.22564 16.148 5.38818C16.8531 5.65 17.325 6.33836 17.325 7.10091V7.13473C17.3041 7.38455 17.38 7.62564 17.534 7.81109C17.688 7.99655 17.919 8.10455 18.161 8.12746Z"
+                                        fill="#DBDBDB" />
+                                </svg>
+                            </div>
+                            <div class="product__card-content">
+                                <img src="./img/authorship-works__img4.jpg">
+                                <div class="product__card-title">Композиция «Сахарный нектарин»</div>
+                                <div class="product__card-price">1 645 сом</div>
+                                <div class="product__card-buy">
+                                    <button>В корзину</button>
+                                    <a class="buyoneclick-rocket buy-btn" onclick="e.stopPropagation();  buyToggle();"
+                                        href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                    <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg">
+                                        <span>
+                                            Купить в 1 клик</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-slide__product">
+                        <div class="product__card-slide">
+                            <div class="product__card-wishlist">
+                                <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" fill="#DBDBDB" clip-rule="evenodd"
+                                        d="M15.235 0.27291C15.9291 0.27291 16.6221 0.370001 17.281 0.589273C21.3411 1.89836 22.8041 6.31655 21.582 10.1784C20.889 12.1518 19.756 13.9529 18.2721 15.4245C16.148 17.4645 13.8171 19.2755 11.308 20.8355L11.033 21.0002L10.747 20.8245C8.22912 19.2755 5.88502 17.4645 3.74112 15.4136C2.26712 13.942 1.13302 12.1518 0.429018 10.1784C-0.813982 6.31655 0.649019 1.89836 4.75312 0.566364C5.07212 0.457273 5.40102 0.38091 5.73102 0.338364H5.86302C6.17212 0.293637 6.47902 0.27291 6.78702 0.27291H6.90802C7.60102 0.293637 8.27202 0.413637 8.92212 0.63291H8.98702C9.03102 0.653637 9.06402 0.676546 9.08602 0.697273C9.32912 0.774728 9.55902 0.862001 9.77902 0.982001L10.197 1.16746C10.298 1.22088 10.4114 1.30251 10.5094 1.37306C10.5715 1.41776 10.6274 1.45801 10.67 1.48382C10.688 1.49432 10.7062 1.50489 10.7246 1.51553C10.8189 1.57014 10.9172 1.62701 11 1.69C12.2221 0.763819 13.706 0.262001 15.235 0.27291ZM18.161 8.12746C18.612 8.11546 18.997 7.75655 19.03 7.29727V7.16746C19.063 5.63909 18.1291 4.25473 16.709 3.72018C16.258 3.56636 15.763 3.80746 15.598 4.26564C15.444 4.72382 15.686 5.22564 16.148 5.38818C16.8531 5.65 17.325 6.33836 17.325 7.10091V7.13473C17.3041 7.38455 17.38 7.62564 17.534 7.81109C17.688 7.99655 17.919 8.10455 18.161 8.12746Z"
+                                        fill="#DBDBDB" />
+                                </svg>
+                            </div>
+                            <div class="product__card-content">
+                                <img src="./img/authorship-works__img5.jpg">
+                                <div class="product__card-title">Композиция «Сахарный нектарин»</div>
+                                <div class="product__card-price">1 645 сом</div>
+                                <div class="product__card-buy">
+                                    <button>В корзину</button>
+                                    <a class="buyoneclick-rocket buy-btn" onclick="e.stopPropagation();  buyToggle();"
+                                        href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                    <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg">
+                                        <span>
+                                            Купить в 1 клик</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide swiper-slide__product">
+                        <div class="product__card-slide">
+                            <div class="product__card-wishlist">
+                                <svg width="22" height="21" viewBox="0 0 22 21" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" fill="#DBDBDB" clip-rule="evenodd"
+                                        d="M15.235 0.27291C15.9291 0.27291 16.6221 0.370001 17.281 0.589273C21.3411 1.89836 22.8041 6.31655 21.582 10.1784C20.889 12.1518 19.756 13.9529 18.2721 15.4245C16.148 17.4645 13.8171 19.2755 11.308 20.8355L11.033 21.0002L10.747 20.8245C8.22912 19.2755 5.88502 17.4645 3.74112 15.4136C2.26712 13.942 1.13302 12.1518 0.429018 10.1784C-0.813982 6.31655 0.649019 1.89836 4.75312 0.566364C5.07212 0.457273 5.40102 0.38091 5.73102 0.338364H5.86302C6.17212 0.293637 6.47902 0.27291 6.78702 0.27291H6.90802C7.60102 0.293637 8.27202 0.413637 8.92212 0.63291H8.98702C9.03102 0.653637 9.06402 0.676546 9.08602 0.697273C9.32912 0.774728 9.55902 0.862001 9.77902 0.982001L10.197 1.16746C10.298 1.22088 10.4114 1.30251 10.5094 1.37306C10.5715 1.41776 10.6274 1.45801 10.67 1.48382C10.688 1.49432 10.7062 1.50489 10.7246 1.51553C10.8189 1.57014 10.9172 1.62701 11 1.69C12.2221 0.763819 13.706 0.262001 15.235 0.27291ZM18.161 8.12746C18.612 8.11546 18.997 7.75655 19.03 7.29727V7.16746C19.063 5.63909 18.1291 4.25473 16.709 3.72018C16.258 3.56636 15.763 3.80746 15.598 4.26564C15.444 4.72382 15.686 5.22564 16.148 5.38818C16.8531 5.65 17.325 6.33836 17.325 7.10091V7.13473C17.3041 7.38455 17.38 7.62564 17.534 7.81109C17.688 7.99655 17.919 8.10455 18.161 8.12746Z"
+                                        fill="#DBDBDB" />
+                                </svg>
+                            </div>
+                            <div class="product__card-content">
+                                <img src="./img/authorship-works__img6.jpg">
+                                <div class="product__card-title">Композиция «Сахарный нектарин»</div>
+                                <div class="product__card-price">1 645 сом</div>
+                                <div class="product__card-buy">
+                                    <button>В корзину</button>
+                                    <a class="buyoneclick-rocket buy-btn" onclick="e.stopPropagation();  buyToggle();"
+                                        href="#!"><img src="./img/rocket-buyoneclick.svg"></a>
+                                    <a class="buyoneclick-desktop buy-btn" href="#!"><img src="./img/buy-one-click.svg">
+                                        <span>
+                                            Купить в 1 клик</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="swiper__btn-prev products-slider__btn-prev">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.5 443.5">
+                        <path fill="#fff"
+                            d="M143.5 221.9L336.2 29.1c6.7-6.7 6.7-17.5 0-24.1 -6.7-6.7-17.5-6.7-24.1 0l-204.8 204.8c-6.7 6.7-6.7 17.5 0 24.1l204.8 204.8c6.8 6.5 17.6 6.4 24.1-0.4 6.4-6.6 6.4-17.1 0-23.7L143.5 221.9z" />
+                    </svg>
+                </div>
+                <div class="swiper__btn-next products-slider__btn-next">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 443.5 443.5">
+                        <path fill="#fff"
+                            d="M336.2 209.6l-204.8-204.8c-6.8-6.5-17.6-6.4-24.1 0.4 -6.4 6.6-6.4 17.1 0 23.7l192.7 192.7L107.3 414.4c-6.7 6.7-6.7 17.5 0 24.1 6.7 6.7 17.5 6.7 24.1 0l204.8-204.8C342.9 227.1 342.9 216.3 336.2 209.6z" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <footer>
+        <div class="footer-top">
+            <div class="wrapper">
+                <div class="footer-top__row">
+                    <div class="footer-top__logo">
+                        <img src="./img/logo-footer.svg" alt="">
+                        <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                        </p>
+                    </div>
+                    <nav class="footer-top__nav">
+                        <ul>
+                            <li><a href="#!">Главная</a></li>
+                            <li><a href="#!">О компании</a></li>
+                            <li><a href="#!">Каталог</a></li>
+                            <li><a href="#!">Контакты</a></li>
+                            <li><a href="#!">Политика</a></li>
+                        </ul>
+                    </nav>
+                    <div class="footer-top__socials">
+                        <h4>Подпишитесь</h4>
+                        <p>Давно выяснено, что при оценке дизайна и композиции читаемый текст мешает сосредоточиться.
+                        </p>
+                        <div class="footer-top_soc-icons">
+                            <img src="./img/instagram-foot.svg">
+                            <img src="./img/facebook-foot.svg">
+                        </div>
+                    </div>
+                    <div class="footer-top__contacts">
+                        <div class="footer-top__contacts-phone">
+                            <h4> Тел.: </h4>
+                            <div>+38267333977 </div>
+                            <div>+38269153328 </div>
+                        </div>
+                        <div class="address">
+                            <div> Адрес: </div>
+                            Бишкек ул. Байтик-Батыра 8 пересекает Суеркулова бывшие Советская/ Донецкая
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-top__logos">
+                    <img src="./img/miraccept.svg" alt="">
+                    <img src="./img/verified.svg" alt="">
+                    <img src="./img/mastercard.svg" alt="">
+                    <img src="./img/visa.svg" alt="">
+                    <img src="./img/sberbank.svg" alt="">
+                    <img src="./img/mir.svg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="wrapper">
+                <p>Цветочный интернет-магазин © «Bishkek Flowers» — заказ, продажа, доставка цветов по Бишкеку. Все
+                    права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/nouislider.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/main-sliders.js"></script>
+</body>
+
+</html>
