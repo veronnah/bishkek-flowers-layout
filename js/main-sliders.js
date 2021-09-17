@@ -1,4 +1,4 @@
-let homeSlider = new Swiper('.swiper-container', {
+const homeSlider = new Swiper('.main__swiper-container', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -18,7 +18,7 @@ let homeSlider = new Swiper('.swiper-container', {
     },
 });
 
-var swiper = new Swiper('.articles__swiper-container', {
+const articles__swiper = new Swiper('.articles__swiper-container', {
     slidesPerView: 4.5,
     spaceBetween: 20,
     loop: false,
