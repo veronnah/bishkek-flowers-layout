@@ -1,6 +1,10 @@
 # bishkek-flowers
+
+Main page:
 https://veronnah.github.io/bishkek-flowers-layout/
 <br>
-https://veronnah.github.io/bishkek-flowers/product-card.html
+Product card page:
+https://veronnah.github.io/bishkek-flowers-layout/product-card.html
 <br>
-https://veronnah.github.io/bishkek-flowers/catalog.html
+Catalog page:
+https://veronnah.github.io/bishkek-flowers-layout/catalog.html
